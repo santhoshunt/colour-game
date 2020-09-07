@@ -9,7 +9,7 @@ bgc=["#E9967A",'#FA8072','#F08080','#0B5345','#FFA07A','#4A235A' ,'#515A5A' ,'#D
 colours=['red','blue','green','yellow','black',"orange"]
 points=0
 def check():
-    global points,ran,label,ptlabel,bgcolour
+    global points,ran,label,ptlabel,bgcolour,lab
     bgcolour=choice(bgc)
     if ent.get().lower()==ran:
         points+=1
@@ -19,6 +19,7 @@ def check():
         ptlabel.config(text=f"Your points: {points}",bg=bgcolour)
         window.config(bg=bgcolour)
         label.config(bg=bgcolour)
+        lab.config(bg=bgcolour)
     else:
         pt=points
         points=0
