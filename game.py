@@ -32,9 +32,9 @@ ent=Entry(window,borderwidth=5,width=20)
 but=Button(text="Enter",command=check)
 keyboard.on_press_key('enter',lambda a:check())
 
-ptlabel.pack()
-label.pack()
-ent.pack()
-but.pack()
+ptlabel.grid()
+label.grid()
+ent.grid()
+but.grid()
 
 window.mainloop()
