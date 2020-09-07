@@ -32,10 +32,11 @@ label=Label(window,text=choice(colours),fg=ran,font=("bold",20))
 ent=Entry(window,borderwidth=5,width=20)
 but=Button(text="Enter",command=check)
 keyboard.on_press_key('enter',lambda a:check())
-
+lab=Label(window,text="Enter the colour of the 'TEXT'")
 ptlabel.grid(row=0,column=0,padx=10,pady=10)
 label.grid(row=1,column=1,padx=10,pady=10)
 ent.grid(row=2,column=1,padx=10,pady=10)
 but.grid(row=3,column=1,padx=10,pady=10)
+lab.grid(row=4,column=1,padx=10,pady=10)
 
 window.mainloop()
