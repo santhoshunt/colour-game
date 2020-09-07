@@ -10,22 +10,22 @@ colours=['red','blue','green','yellow','black',"orange"]
 points=0
 def check():
     global points,ran,label,ptlabel,bgcolour
+    bgcolour=choice(bgc)
     if ent.get().lower()==ran:
         points+=1
         ent.delete(0,END)
         ran=choice(colours)
         label.config(text=choice(colours),fg=ran)
-        bgcolour=choice(bgc)
-        ptlabel.config(text=f"Your points : {points}",bg=bgcolour)
+        ptlabel.config(text=f"Your points: {points}",bg=bgcolour)
         window.config(bg=bgcolour)
         label.config(bg=bgcolour)
     else:
         pt=points
         points=0
-        ptlabel.config(text=f"Your point : 0",bg=bgcolour)
-    if points ==0:
+        ptlabel.config(text=f"Your point : 0")
         messagebox.showerror("You lost",f"It's actually \"{ran.upper()}\" but you've entered \"{ent.get().upper()}\"\nYour points : {pt}")
         ent.delete(0,END)
+    
 ran=choice(colours)
 ptlabel=Label(window,text="Your point : 0",font=("bold",20))
 label=Label(window,text=choice(colours),fg=ran,font=("bold",20))
